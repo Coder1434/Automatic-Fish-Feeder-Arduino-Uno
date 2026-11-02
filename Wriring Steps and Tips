@@ -1,0 +1,56 @@
+## Wiring Guide
+
+Building your own automatic fish feeder is a rewarding DIY project! Based on the code provided—which uses digital pins 2 through 8 for a 7-segment display and pin 9 for a servo motor—here is a detailed step-by-step wiring guide to get your hardware connected safely and correctly.
+
+### Components Needed
+
+* **Arduino Board** (e.g., Arduino Uno or Nano)
+* **7-Segment Display** (common cathode or common anode, with appropriate current-limiting resistors)
+* **Micro Servo Motor** (e.g., SG90)
+* **Breadboard and Jumper Wires**
+* **External Power Supply / USB Cable** (for powering the Arduino)
+
+---
+
+### Step 1: Prepare Your Breadboard and Power Rails
+
+1. Place your Arduino and breadboard on a clean, flat, non-conductive surface.
+2. Connect the **5V** pin on the Arduino to the positive rail of your breadboard.
+3. Connect one of the **GND** (Ground) pins on the Arduino to the negative (ground) rail of your breadboard.
+
+### Step 2: Wire the 7-Segment Display (Pins 2–8)
+
+The code controls individual segments or indicator lines using pins 2 through 8.
+
+1. Mount your 7-segment display onto the breadboard.  
+2. Connect Arduino **Pin 2** through a **220Ω–330Ω current-limiting resistor** to the display's Segment A pin.
+3. Connect Arduino **Pin 3** through a resistor to Segment B.
+4. Connect Arduino **Pin 4** through a resistor to Segment C.
+5. Connect Arduino **Pin 5** through a resistor to Segment D.
+6. Connect Arduino **Pin 6** through a resistor to Segment E.
+7. Connect Arduino **Pin 7** through a resistor to Segment F.
+8. Connect Arduino **Pin 8** through a resistor to Segment G (or the Decimal Point, depending on your physical layout).
+9. Connect the common pin of your 7-segment display to either **GND** (if it's a common cathode display) or **5V** (if it's a common anode display).
+
+### Step 3: Wire the Servo Motor (Pin 9)
+
+The servo motor acts as the mechanical dispenser gate.
+
+1. Identify the three wires on your servo motor connector:
+* **Signal Wire** (usually Orange or Yellow)
+* **VCC / Power Wire** (usually Red)
+* **Ground Wire** (usually Brown or Black)
+
+
+2. Connect the **Signal wire** directly to Arduino **Pin 9**.
+3. Connect the **VCC wire** to the 5V power rail on your breadboard.
+4. Connect the **Ground wire** to the GND rail on your breadboard.
+
+---
+
+## Tips and Tricks for a Successful Build
+
+* **Power Stability & Servo Brownouts:** Servos draw a sudden surge of electrical current when they start moving. If your Arduino unexpectedly resets or freezes when the servo triggers, it's likely a power drop. If this happens, power the servo using an **external 5V power source** rather than directly relying on the Arduino's onboard 5V regulator, making sure to share a common ground between the external power supply and the Arduino.
+* **Water Safety is Paramount:** Since this device will sit near an aquarium, moisture is your biggest enemy. Enclose your Arduino, breadboard, and wiring inside a sealed plastic project box or 3D-printed housing, and mount it safely above the waterline so accidental splashes or humidity cannot short-circuit your electronics.
+* **Double-Check Resistors:** Never connect LEDs or 7-segment display pins directly to digital pins without resistors, as drawing too much current can overheat or damage your Arduino's internal output pins over time.
+* **Organize with Color-Coding:** Use specific colors for your jumper wires (e.g., **Red** for 5V power, **Black** for Ground, and other colors like **Yellow** or **Blue** for data/signal pins) to make troubleshooting way easier if a connection comes loose.
