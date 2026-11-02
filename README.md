@@ -5,3 +5,6 @@ An automated Arduino fish feeder project that coordinates a 7-segment display wi
 * **Status Display:** Uses a 7-segment display connected to pins 2–8 to show custom sequences or countdowns during operation.
 * **Automated Dispensing:** Utilizes a standard servo motor to open and close the food compartment.
 * **Simple & Reliable:** Built using basic Arduino digital I/O control and the standard `Servo` library without requiring complex external modules.
+
+Below is the wiring diagram made in Tinkercad
+<img width="1493" height="862" alt="image" src="https://github.com/user-attachments/assets/75984a00-c282-41ab-a2a3-7e4f05f248e0" />
