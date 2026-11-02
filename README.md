@@ -8,3 +8,4 @@ An automated Arduino fish feeder project that coordinates a 7-segment display wi
 
 Below is the wiring diagram made in Tinkercad
 <img width="1493" height="862" alt="image" src="https://github.com/user-attachments/assets/75984a00-c282-41ab-a2a3-7e4f05f248e0" />
+<img width="895" height="581" alt="image" src="https://github.com/user-attachments/assets/475ca9c1-c3bf-481c-8640-51f3965d0a8f" />
